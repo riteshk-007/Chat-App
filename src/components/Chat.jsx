@@ -24,25 +24,25 @@ function Chat() {
             alt="user"
             className="w-14 h-14 rounded-full object-cover p-1"
           />
-          <span className="mx-3 font-semibold text-base text-gray-400">
+          <span className="mx-3 font-semibold text-base text-gray-200">
             Seth Tran
           </span>
         </span>
         <span className="w-1/2 h-full px-5 flex items-center justify-end">
-          <MdCall className="mx-2 cursor-pointer text-gray-500" fontSize={20} />
+          <MdCall className="mx-2 cursor-pointer text-gray-300" fontSize={20} />
           <BsFillCameraVideoFill
-            className="mx-2 cursor-pointer text-gray-500"
+            className="mx-2 cursor-pointer text-gray-300"
             fontSize={20}
           />
           <BsFillInfoCircleFill
-            className="mx-2 cursor-pointer text-gray-500"
+            className="mx-2 cursor-pointer text-gray-300"
             fontSize={20}
           />
         </span>
       </div>
       {/* messages area  */}
       <span
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-500 w-full h-5/6 overflow-y-auto flex flex-col-reverse items-start px-4"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-700 w-full h-5/6 overflow-y-auto flex flex-col-reverse items-start px-4"
         onClick={() => setShowEmoji(false)}
       >
         {/* message */}
@@ -67,7 +67,7 @@ function Chat() {
           <span className="relative">
             <MdEmojiEmotions
               fontSize={22}
-              className="mx-2 cursor-pointer text-gray-500"
+              className="mx-2 cursor-pointer text-gray-400"
               onClick={() => setShowEmoji(!showEmoji)}
             />
             {showEmoji && (
@@ -81,7 +81,7 @@ function Chat() {
           <label htmlFor="image">
             <LuImagePlus
               fontSize={22}
-              className="mx-2 cursor-pointer text-gray-500"
+              className="mx-2 cursor-pointer text-gray-400"
             />
           </label>
         </span>
@@ -95,7 +95,7 @@ function Chat() {
         <span>
           <RiSendPlane2Fill
             fontSize={23}
-            className="cursor-pointer text-gray-500"
+            className="cursor-pointer text-gray-400"
           />
         </span>
       </div>
