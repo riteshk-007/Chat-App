@@ -2,7 +2,6 @@ import { LuImagePlus } from "react-icons/lu";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { MdCall, MdEmojiEmotions } from "react-icons/md";
 import { BsFillCameraVideoFill, BsFillInfoCircleFill } from "react-icons/bs";
-import EmojiPicker from "emoji-picker-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ChatContaxt } from "../Context/ChatContaxt";
 import {
@@ -19,7 +18,6 @@ import { v4 as uuid } from "uuid";
 import { getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 function Chat() {
-  const [showEmoji, setShowEmoji] = useState(false);
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState("");
   const [img, setImg] = useState(null);
@@ -106,27 +104,18 @@ function Chat() {
             alt="user"
             className="w-14 h-14 rounded-full object-cover p-1"
           />
-          <span className="mx-3 font-semibold text-base text-gray-200 capitalize">
+          <span className="mx-1 md:mx-3 font-semibold text-base text-gray-200 capitalize">
             {data.user?.displayName}
           </span>
         </span>
         <span className="w-1/2 h-full px-5 flex items-center justify-end">
-          <MdCall className="mx-2 cursor-pointer text-gray-300" fontSize={20} />
-          <BsFillCameraVideoFill
-            className="mx-2 cursor-pointer text-gray-300"
-            fontSize={20}
-          />
-          <BsFillInfoCircleFill
-            className="mx-2 cursor-pointer text-gray-300"
-            fontSize={20}
-          />
+          <MdCall className="mx-2 cursor-pointer text-gray-300 text-base" />
+          <BsFillCameraVideoFill className="mx-2 cursor-pointer text-gray-300 text-base" />
+          <BsFillInfoCircleFill className="mx-2 cursor-pointer text-gray-300 text-base" />
         </span>
       </div>
       {/* messages area  */}
-      <span
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-700 w-full h-5/6 overflow-y-auto flex flex-col items-start px-4 scrolled"
-        onClick={() => setShowEmoji(false)}
-      >
+      <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-700 w-full h-[84%] md:h-5/6 overflow-y-auto flex flex-col items-start px-4 scrolled">
         {/* message */}
         {messages?.map((msg) => (
           <span
@@ -158,15 +147,7 @@ function Chat() {
       <div className="w-full px-2 bg-gray-800 flex items-center justify-evenly absolute bottom-0 z-50">
         <span className="flex items-center justify-center">
           <span className="relative">
-            <MdEmojiEmotions
-              className="md:mx-2  cursor-pointer text-gray-400 md:text-2xl"
-              onClick={() => setShowEmoji(!showEmoji)}
-            />
-            {showEmoji && (
-              <span className="absolute bottom-10 left-5">
-                <EmojiPicker />
-              </span>
-            )}
+            <MdEmojiEmotions className="md:mx-2  cursor-pointer text-gray-400 md:text-2xl" />
           </span>
 
           <input
@@ -181,13 +162,13 @@ function Chat() {
           </label>
         </span>
         <span className="flex items-center justify-center w-4/5  md:mx-3">
-          <textarea
+          <input
             type="text"
             className=" w-full min-h-fit bg-gray-700 h-8 md:h-10 px-3 rounded-md outline-none text-white mx-1 my-3 md:my-4 flex  items-center"
             placeholder="Type a message"
             onChange={(e) => setText(e.target.value)}
             value={text}
-          ></textarea>
+          />
         </span>
         <span>
           <RiSendPlane2Fill

@@ -144,7 +144,7 @@ function UserList() {
         )}
         {user && (
           <span
-            className="flex items-center justify-start w-full md:w-1/2 px-1 md:px-3 -mb-6 mt-2 rounded-md capitalize cursor-pointer hover:bg-gray-400 hover:text-black text-gray-400 py-1 border border-gray-700 shadow shadow-gray-700"
+            className="flex items-center justify-start w-full md:w-1/2  md:px-3 -mb-6 mt-2 rounded-md capitalize cursor-pointer hover:bg-gray-400 hover:text-black text-gray-400 py-1 border border-gray-700 shadow shadow-gray-700"
             onClick={handleSelect}
           >
             <img

@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="w-screen h-screen bg-blue-300 flex items-center justify-center">
+    <div className="w-screen h-screen bg-gray-800 md:bg-blue-300 flex items-center justify-center">
       <Routes>
         <Route path="/">
           <Route
