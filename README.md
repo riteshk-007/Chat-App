@@ -1,4 +1,4 @@
-#Chat App
+## Chat App
 ![image](https://github.com/riteshk-007/Chat-App/assets/135107962/eb8b0f42-196f-4cc2-abcc-448d5a95cbfd)
 ![image](https://github.com/riteshk-007/Chat-App/assets/135107962/ff6cbb66-3724-45ad-96ce-0b105281f608)
 
