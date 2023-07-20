@@ -1,3 +1,7 @@
+#Chat App
+![image](https://github.com/riteshk-007/Chat-App/assets/135107962/eb8b0f42-196f-4cc2-abcc-448d5a95cbfd)
+![image](https://github.com/riteshk-007/Chat-App/assets/135107962/ff6cbb66-3724-45ad-96ce-0b105281f608)
+
 
 ## Installation
 
@@ -33,6 +37,7 @@ npm start
 3. Create a Firebase project and enable the Firestore database and Authentication services.
 4. Obtain your Firebase configuration details (apiKey, authDomain, projectId, etc.).
 5. Create a `.env` file in the root directory of the project and add your Firebase configuration details in the following format:
+![image](https://github.com/riteshk-007/Chat-App/assets/135107962/95c6fee4-975a-4bf1-b8eb-fe510d098af2)
 
 ```
 REACT_APP_API_KEY=YOUR_API_KEY
@@ -56,6 +61,7 @@ To deploy the Chat App, you can follow the instructions provided by your hosting
 2. Follow the deployment instructions provided by your hosting provider. For Firebase Hosting, you would need to install the Firebase CLI (`npm install -g firebase-tools`), log in to your Firebase account (`firebase login`), initialize your project (`firebase init`), and deploy the app (`firebase deploy`).
 
 Remember to update the Firebase configuration in the `.env` file of your deployed app.
+![image](https://github.com/riteshk-007/Chat-App/assets/135107962/126e2454-56a5-4845-81a9-5c279f22b1e2)
 
 ## Contributing
 
